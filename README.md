@@ -16,7 +16,7 @@ To work, you need to perform multiple commands.
 * Definition of distribution
 * Determining whether an installed package
 * Upgrade system
-* Install modules Nginx
+* Install modules Nginx(nchan, nginx-upload-progress-module, echo-nginx-module, nginx-rtmp-module)
 * Restart the service and the error if the service is not running
 
 ##Start

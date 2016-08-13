@@ -122,7 +122,7 @@ nginx_modules_install(){
 			echo "${loc_delete_zip} master.zip"
 			rm -rf master.zip
 			
-			echo "${loc_dow_mod} echo-nginx-module"
+			echo "${loc_dow_mod} nginx-rtmp-module"
 			wget https://github.com/arut/nginx-rtmp-module/archive/master.zip
 			echo "${loc_unpack}"
 			unzip master.zip
