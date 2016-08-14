@@ -16,7 +16,7 @@
 * Определение дистрибутива
 * Определение наличия установленного пакета
 * Обновление системы
-* Установка модулей Nginx(nchan, nginx-upload-progress-module, echo-nginx-module, nginx-rtmp-module)
+* Установка модулей Nginx(nchan, nginx-upload-progress-module, echo-nginx-module, nginx-rtmp-module и дополнительно другие)
 * Перезапуск службы и вывод ошибки, если служба не запущена
 
 ##Запуск
