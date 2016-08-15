@@ -30,7 +30,7 @@ unzip master.zip
 ```
 Go to directory with script and set permissions 777
 ```
-cd nginx-install-auto-master && chmod 777 nginx_install.sh
+cd nginx-kompiler-master && chmod 777 nginx_kompiler.sh
 ```
 Run the script
 ```
