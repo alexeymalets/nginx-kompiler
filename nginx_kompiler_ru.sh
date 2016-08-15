@@ -9,8 +9,8 @@ clear
 #Detect lang
 loc_none_script='К сожалению, скрипт Nginx Install/Upgrade auto Вашу ОС не поддерживает'
 loc_your_os='Ваша ОС';
-loc_no_install_nginx = 'У Вас не установлен Nginx!'
-loc_yes= 'Да'
+loc_no_install_nginx='У Вас не установлен Nginx!'
+loc_yes='Да'
 loc_no='Нет'
 loc_up_ug_system='Запустить обновление системы?'
 loc_choose='Ваш выбор'
