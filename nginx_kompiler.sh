@@ -42,6 +42,7 @@ loc_link_mod_nginx='Enter the github link to the module Nginx'
 loc_link_mod_ex='Example:'
 loc_cin_dir_name_mod='Enter the name of the directory with the module'
 loc_add_nginx_mod_cho='Add an additional module Nginx?'
+loc_no_text='You have not entered anything, so an additional module  was not added.'
 #Spechil sim
 
 #Detect OS
@@ -129,14 +130,18 @@ module_install_l(){
 		echo "${loc_link_mod_nginx}"
 		echo "${loc_link_mod_ex}:https://github.com/arut/nginx-rtmp-module/archive/master.zip"
 		read -p "${loc_choose}: " module_nginx_ob
-		wget $module_nginx_ob
-		echo "${loc_unpack}"
-		unzip master.zip
-		echo "${loc_delete_zip} master.zip"
-		rm -rf master.zip
-		echo "${loc_cin_dir_name_mod}"
-		read -p "${loc_choose}: " cin_dir_name_mod
-		cin_dir_name_mod_nginx_l="--add-module=/etc/nginx/kompiler/${cin_dir_name_mod}"
+		if [ -z "$($module_nginx_ob)" ]; then
+			echo "${loc_no_text}"
+		else
+			wget $module_nginx_ob
+			echo "${loc_unpack}"
+			unzip master.zip
+			echo "${loc_delete_zip} master.zip"
+			rm -rf master.zip
+			echo "${loc_cin_dir_name_mod}"
+			read -p "${loc_choose}: " cin_dir_name_mod
+			cin_dir_name_mod_nginx_l="--add-module=/etc/nginx/kompiler/${cin_dir_name_mod}"
+		fi
 	fi
 }
 nginx_modules_install(){
