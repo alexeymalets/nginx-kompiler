@@ -47,7 +47,12 @@ loc_al_module='Вы уже добавили данный модуль ранее
 loc_install_module_yo='Установить другие модули?'
 loc_pre_upg='Подготавливаем систему для запуска скрипта'
 loc_link='Ссылка'
-#Spechil sim
+not_root='Войдите под root пользователем и повторите запуск скрипта.'
+
+if [ $USER != 'root' ]; then
+  echo "${not_root}"
+  exit 0
+fi
 
 #Detect OS
 

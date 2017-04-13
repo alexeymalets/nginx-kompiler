@@ -47,7 +47,12 @@ loc_al_module='You have already added this module before'
 loc_install_module_yo='Install other Nginx modules?'
 loc_pre_upg='Prepare the system to run the script'
 loc_link='Link'
-#Spechil sim
+not_root='[!]Log in as root and restart the script.'
+
+if [ $USER != 'root' ]; then
+  echo "${not_root}"
+  exit 0
+fi
 
 #Detect OS
 
